@@ -34,4 +34,3 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
 
 COPY --from=builder /usr/local/bin/ffmpeg /usr/local/bin/ffmpeg
 COPY --from=builder /usr/local/bin/ffprobe /usr/local/bin/ffprobe
-
