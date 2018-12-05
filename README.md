@@ -17,3 +17,7 @@ FFmpeg images are shipped with variable versions of FFmpeg, Video Codec SDK, and
 ##### NVIDIA Video Codec SDK 8.2 (CUDA Toolkit 10.0)
 
 - [`8.2-ffmpeg4.1`, `8.2`, `latest` (*8.2/ffmpeg4.1/Dockerfile*)](https://github.com/clerk67/docker-nvenc/blob/master/8.2/ffmpeg4.1/Dockerfile)
+
+##### NVIDIA Video Codec SDK 8.0 (CUDA Toolkit 10.0)
+
+- [`8.0-ffmpeg3.4` (*8.0/ffmpeg3.4/Dockerfile*)](https://github.com/clerk67/docker-nvenc/blob/master/8.0/ffmpeg3.4/Dockerfile)
