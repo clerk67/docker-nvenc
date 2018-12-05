@@ -14,7 +14,7 @@ RUN curl -fsSLO https://www.nasm.us/pub/nasm/releasebuilds/$NASM_VERSION/nasm-$N
   && make -j$(nproc) \
   && make install
 
-RUN git clone -b n$NVCODEC_VERSION https://git.videolan.org/git/ffmpeg/nv-codec-headers \
+RUN git clone -b n$NVCODEC_VERSION --depth 1 https://git.videolan.org/git/ffmpeg/nv-codec-headers \
   && cd nv-codec-headers \
   && make install
 
