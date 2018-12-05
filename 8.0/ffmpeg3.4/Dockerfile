@@ -1,9 +1,9 @@
-FROM nvidia/cuda:10.0-devel-centos7 as builder
+FROM nvidia/cuda:10.0-devel-ubuntu18.04 as builder
 
 ENV NASM_VERSION 2.14
 ENV FFMPEG_VERSION 3.4.5
 
-RUN yum install -y autoconf bzip2 git make
+RUN apt-get update && apt-get install -y autoconf curl git pkg-config
 
 RUN curl -fsSLO https://www.nasm.us/pub/nasm/releasebuilds/$NASM_VERSION/nasm-$NASM_VERSION.tar.bz2 \
   && tar -xjf nasm-$NASM_VERSION.tar.bz2 \
@@ -22,7 +22,7 @@ RUN curl -fsSLO https://ffmpeg.org/releases/ffmpeg-$FFMPEG_VERSION.tar.bz2 \
   && make install
 
 
-FROM nvidia/cuda:10.0-runtime-centos7
+FROM nvidia/cuda:10.0-runtime-ubuntu18.04
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,video,utility
