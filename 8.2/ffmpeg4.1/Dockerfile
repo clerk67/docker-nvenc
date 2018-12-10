@@ -4,7 +4,7 @@ ENV NASM_VERSION 2.14
 ENV NVCODEC_VERSION 8.2.15.6
 ENV FFMPEG_VERSION 4.1
 
-RUN yum install -y autoconf bzip2 git make
+RUN yum install -y autoconf bzip2 git make zlib-devel
 
 RUN curl -fsSLO https://www.nasm.us/pub/nasm/releasebuilds/$NASM_VERSION/nasm-$NASM_VERSION.tar.bz2 \
   && tar -xjf nasm-$NASM_VERSION.tar.bz2 \
